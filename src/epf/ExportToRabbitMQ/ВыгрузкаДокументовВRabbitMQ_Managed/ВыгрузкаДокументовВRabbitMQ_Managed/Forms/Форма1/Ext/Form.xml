@@ -17,6 +17,17 @@
 			</ToolTip>
 			<ExtendedTooltip name="ГруппаЛюбойДокументРасширеннаяПодсказка" id="7"/>
 			<ChildItems>
+				<InputField name="ВыбДокЛюбойГУИД" id="8">
+					<DataPath>ВыбДокЛюбойГУИД</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВыбДокЛюбойГУИДКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ВыбДокЛюбойГУИДРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<Button name="ЛюбойДокументПолучитьПоГУИДу" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЛюбойДокументПолучитьПоГУИДу</CommandName>
+					<ExtendedTooltip name="ЛюбойДокументПолучитьПоГУИДуРасширеннаяПодсказка" id="12"/>
+				</Button>
 				<InputField name="ВыбДокЛюбой" id="1">
 					<DataPath>ВыбДокЛюбой</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -49,6 +60,21 @@
 				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
 			</Type>
 		</Attribute>
+		<Attribute name="ВыбДокЛюбойГУИД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выб док любой ГУИД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыгрузитьЛюбойДокументНаФорму" id="1">
@@ -65,6 +91,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьЛюбойДокументНаФорму</Action>
+		</Command>
+		<Command name="ЛюбойДокументПолучитьПоГУИДу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Любой документ получить по ГУИДу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Любой документ получить по ГУИДу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЛюбойДокументПолучитьПоГУИДу</Action>
 		</Command>
 	</Commands>
 </Form>
